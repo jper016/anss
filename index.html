@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Appointment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-background">
+        <h1>ANS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Book an Appointment Today!</h2>
+        <p>Choose from our range of services and secure a time that suits you.</p>
+
+        <!-- Image Slider -->
+        <div class="carousel">
+            <div class="slide">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.Ue7Hlg_2ofrG7Iajj1hTIgHaF7&pid=Api&P=0&h=220">
+            </div>
+            <div class="slide">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.o87XcTQu1-E1O3KBrCztMwHaEK&pid=Api&P=0&h=220" alt="Service Image 2">
+            </div>
+            <div class="slide">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.0pDO9i5TrxYZ_VOhz0wUcAHaDj&pid=Api&P=0&h=220" alt="Service Image 3">
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="prev" onclick="changeSlide(-1)">❮</button>
+        <button class="next" onclick="changeSlide(1)">❯</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

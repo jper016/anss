@@ -1,0 +1,397 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('image/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.header-background {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('image/header.jfif');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 50px; 
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    list-style-type: none;
+    display: inline-block; 
+    margin: 0 1px;
+}
+
+nav ul li a {
+    
+    display: block;           
+    padding: 1px 2px;        
+    color: #161313;
+    text-decoration: none;
+    border: 1px solid #000000;   
+    border-radius: 5px;       
+    background-color: #b8e7f3;  
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #2897f1;
+    color: #000;        
+}
+
+/* Main Content */
+main {
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide {
+    display: none;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transform: translateY(-50%);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Shop Page */
+#search-bar {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    background-color: #98bcd1;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product .price {
+    font-weight: bold;
+    color: #333;
+}
+
+button {
+    width: fit-content;
+    display: block;
+    background-color: #28a745;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Contact Page */
+.contact-form, .contact-info {
+    padding: 30px;
+    margin: 0px auto;
+    background-color: #4d62bd;
+    border-radius: 8px;
+    width: 50%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #000000;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Admin Section */
+.admin-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-section h2 {
+    margin-bottom: 15px;
+}
+
+form input, form textarea {
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Login and Register */
+.register-button {
+    width: fit-content;
+    display: block;
+    background-color: #28a745;
+    color: rgb(245, 245, 245);
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    
+}
+
+.register-button:hover {
+    background-color: #27aa44;
+}
+
+.registration-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #5356e7;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-section h2 {
+    margin-bottom: 15px;
+}
+
+.registration-section p {
+    margin-top: 15px;
+}
+
+/* Services */
+.button-bar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.book-appointment-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #44c949;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: 1px solid #000000;
+}
+
+.book-appointment-button:hover {
+    background-color: #45a049;
+}
+
+
+/* Appointment */
+
+#appointment-form {
+    max-width: 500px;             
+    margin: 0 auto;               
+    padding: 20px;
+    border: 1px solid #ddd;       
+    border-radius: 8px;
+    background-color: #f9f9f9;     
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#appointment-form h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 5px;
+}
+
+#appointment-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+#appointment-form input[type="text"],
+#appointment-form input[type="email"],
+#appointment-form input[type="date"],
+#appointment-form select {
+    width: 100%;                  
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;        
+    border-radius: 5px;
+    box-sizing: border-box;  
+    border:1px solid #000000       
+}
+
+#appointment-form button[type="submit"] {
+    background-color: #28a745;      
+    color: white;                   
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#appointment-form button[type="submit"]:hover {
+    background-color: #218838;      
+}
+
+@media (max-width: 600px) {
+    #appointment-form, .header-background {
+        padding: 15px;
+    }
+}
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(247, 247, 247, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

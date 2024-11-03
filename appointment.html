@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-background">
+        <h1>Book an Appointment</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="appointment-form">
+            <h2>Owner Information</h2>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="contactno">Contact #:</label>
+            <input type="text" id="contactno" name="contactno" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <h2>Pet Information</h2>
+            <label for="pettype">Pet type:</label>
+            <input type="text" id="pettype" name="pettype" required>
+
+            <label for="breed">Breed:</label>
+            <input type="text" id="breed" name="breed" required>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+
+            <label for="service">Choose a Service:</label>
+            <select id="service" name="service">
+                <option value="consultation">Consultation</option>
+                <option value="follow-up">Follow-up</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </main>
+    <script src="appointment.js"></script> <!-- Include the appointment.js file -->
+</body>
+</html>

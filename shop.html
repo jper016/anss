@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Animal Clinic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-background">
+        <h1>Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Products</h2>
+        
+        <!-- Search Bar -->
+        <input type="text" id="search-bar" placeholder="Search for products..." onkeyup="searchProducts()">
+    
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product" data-name="Premium Pet Food">
+                <img src="image\1.jpg" alt="Pet Food">
+                <h3>Premium Pet Food</h3>
+                <p>High-quality food to keep your pet healthy.</p>
+                <p class="price">₱20.00</p>
+                <button onclick="addToCart('Premium Pet Food', 20.00)">Add to Cart</button>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product" data-name="Pet Grooming Kit">
+                <img src="image\2.jfif" alt="Pet Grooming Kit">
+                <h3>Pet Grooming Kit</h3>
+                <p>Everything you need to keep your pet looking great.</p>
+                <p class="price">₱15.00</p>
+                <button onclick="addToCart('Pet Grooming Kit', 15.00)">Add to Cart</button>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product" data-name="Interactive Pet Toy">
+                <img src="image\3.jpg" alt="Pet Toy">
+                <h3>Interactive Pet Toy</h3>
+                <p>Fun toy to keep your pet engaged and active.</p>
+                <p class="price">₱10.00</p>
+                <button onclick="addToCart('Interactive Pet Toy', 10.00)">Add to Cart</button>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product" data-name="Pet Wellness Medicine">
+                <img src="image\4.jpg" alt="Pet Medicine">
+                <h3>Pet Wellness Medicine</h3>
+                <p>Maintain your pet's health with our wellness products.</p>
+                <p class="price">₱25.00</p>
+                <button onclick="addToCart('Pet Wellness Medicine', 25.00)">Add to Cart</button>
+            </div>
+        </div>
+    
+        <!-- Cart Section -->
+        <section class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="cart-total">Total: ₱0.00</p>
+            
+            <!-- Delivery Method Dropdown -->
+            <label for="delivery-method">Choose Delivery Method:</label>
+            <select id="delivery-method" onchange="updateDeliveryFee()">
+                <option value="standard" data-fee="0">Standard (Free)</option>
+                <option value="express" data-fee="10">Express (₱10.00)</option>
+                <option value="pickup" data-fee="0">In-store Pickup (Free)</option>
+            </select>
+            <p id="delivery-fee">Delivery Fee: ₱0.00</p>
+            
+            <button onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+    
+    <style>
+        
+    </style>
+    
+    <script src="shop.js"></script>
+    <script>
+        // JavaScript to handle delivery fee calculation
+        function updateDeliveryFee() {
+            const deliveryMethod = document.getElementById('delivery-method');
+            const selectedOption = deliveryMethod.options[deliveryMethod.selectedIndex];
+            const fee = parseFloat(selectedOption.getAttribute('data-fee'));
+            document.getElementById('delivery-fee').textContent = "Delivery Fee: ₱" + fee.toFixed(2);
+            
+            // Update cart total with delivery fee
+            let cartTotal = parseFloat(document.getElementById('cart-total').textContent.replace("Total: ₱", ""));
+            let totalWithDelivery = cartTotal + fee;
+            document.getElementById('cart-total').textContent = "Total: ₱" + totalWithDelivery.toFixed(2);
+        }
+    </script>
+</body>
+</html>

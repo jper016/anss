@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Animal Clinic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html">Dashboard</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="admin-section">
+            <h2>Manage Appointments</h2>
+            <button onclick="openAddAppointmentForm()">Add New Appointment</button>
+            <div id="appointments-list">
+                <!-- Dynamic list of appointments would be loaded here -->
+            </div>
+            <!-- Add/Edit Appointment Form -->
+            <div id="appointment-form" style="display: none;">
+                <h3>Add/Edit Appointment</h3>
+                <form id="appointment-form-details">
+                    <input type="text" name="client-name" placeholder="Client Name" required>
+                    <input type="text" name="pet-name" placeholder="Pet Name" required>
+                    <input type="datetime-local" name="appointment-date" required>
+                    <textarea name="notes" placeholder="Appointment Notes"></textarea>
+                    <button type="submit">Save Appointment</button>
+                    <button type="button" onclick="closeAppointmentForm()">Cancel</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="admin-section">
+            <h2>Manage Services</h2>
+            <button onclick="openAddServiceForm()">Add New Service</button>
+            <div id="services-list">
+                <!-- Dynamic list of services would be loaded here -->
+            </div>
+            <!-- Add/Edit Service Form -->
+            <div id="service-form" style="display: none;">
+                <h3>Add/Edit Service</h3>
+                <form id="service-form-details">
+                    <input type="text" name="service-name" placeholder="Service Name" required>
+                    <input type="number" name="service-price" placeholder="Service Price" required>
+                    <textarea name="service-description" placeholder="Service Description"></textarea>
+                    <button type="submit">Save Service</button>
+                    <button type="button" onclick="closeServiceForm()">Cancel</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="admin-section">
+            <h2>Manage Client Information</h2>
+            <div id="clients-list">
+                <!-- Dynamic list of clients would be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Animal Clinic. All rights reserved.</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
